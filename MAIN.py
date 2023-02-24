@@ -3,12 +3,6 @@ import sqlite3
 conn = sqlite3.connect('contatos.db')
 cursor = conn.cursor()
 
-cursor.execute('''CREATE TABLE contatos
-               (id INTEGER PRIMARY KEY AUTOINCREMENT,
-                nome TEXT,
-                email TEXT,
-                telefone TEXT);''')
-
 conn.commit()
 conn.close()
 def inserir_contato(nome, email, telefone):
